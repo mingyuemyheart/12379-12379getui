@@ -153,6 +153,7 @@ public class PgyApplication extends Application{
 
 			@Override
 			public void onFailure(String s, String s1) {
+				Log.e("deviceToken", s);
 			}
 		});
 

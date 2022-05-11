@@ -281,7 +281,7 @@ public class ShawnWarningListActivity extends BaseActivity implements OnClickLis
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				WarningDto data = showList.get(arg2);
-				Intent intentDetail = new Intent(mContext, WarningDetailActivity.class);
+				Intent intentDetail = new Intent(mContext, WarningDetailHWMIMZActivity.class);
 				intentDetail.putExtra("url", data.html);
 				startActivity(intentDetail);
 			}
@@ -383,7 +383,9 @@ public class ShawnWarningListActivity extends BaseActivity implements OnClickLis
 				}
 				showList.clear();
 				showList.addAll(selecteList);
-				cityAdapter.notifyDataSetChanged();
+				if (cityAdapter != null) {
+					cityAdapter.notifyDataSetChanged();
+				}
 			}
 		});
 	}
@@ -450,7 +452,9 @@ public class ShawnWarningListActivity extends BaseActivity implements OnClickLis
 				}
 				showList.clear();
 				showList.addAll(selecteList);
-				cityAdapter.notifyDataSetChanged();
+				if (cityAdapter != null) {
+					cityAdapter.notifyDataSetChanged();
+				}
 			}
 		});
 	}
@@ -517,7 +521,9 @@ public class ShawnWarningListActivity extends BaseActivity implements OnClickLis
 				}
 				showList.clear();
 				showList.addAll(selecteList);
-				cityAdapter.notifyDataSetChanged();
+				if (cityAdapter != null) {
+					cityAdapter.notifyDataSetChanged();
+				}
 			}
 		});
 	}
